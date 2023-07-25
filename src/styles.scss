@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+	margin: 0;
+	box-sizing: border-box;
+	position: relative;
+	background-color: #daf2c1;
+}
+
+* {
+  direction: rtl;
+  user-select: none;
+}
+
+html * {
+	font-family: 'Assistant', sans-serif;
+}
