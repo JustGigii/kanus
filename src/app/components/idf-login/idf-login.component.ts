@@ -14,15 +14,19 @@ export class IdfLoginComponent implements OnInit {
   constructor(private msalService: MsalService) { }
 
   ngOnInit(): void {
-    this.msalService.instance.handleRedirectPromise().then(
-      res => {
-        if (res != null && res.account != null) {
-          this.msalService.instance.setActiveAccount(res.account);
-          this.userLogged.emit(res.account);
-          sessionStorage.setItem("isUserLogged", 'true');
+    console.log(this.msalService.instance.getActiveAccount());
+    if (this.msalService.instance.getActiveAccount() !== null) {
+      this.userLogged.emit(this.msalService.instance.getActiveAccount());
+    } else {
+      this.msalService.instance.handleRedirectPromise().then(
+        res => {
+          if (res != null && res.account != null) {
+            this.msalService.instance.setActiveAccount(res.account);
+            this.userLogged.emit(res.account);
+          }
         }
-      }
-    );
+      );
+    }
   }
 
   isLoggedIn() : boolean {
