@@ -3,16 +3,42 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JarInfoComponent } from './components/jar-info/jar-info.component';
+
+import { HttpClientModule } from '@angular/common/http';
+import { StarInfoComponent } from './components/star-info/star-info.component';
+import { MSAL_INSTANCE, MsalModule, MsalService } from '@azure/msal-angular';
+import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-browser';
+
+export function MSALInstanceFactory(): IPublicClientApplication {
+  return new PublicClientApplication({
+    auth: {
+      clientId: 'c25247c6-3cd6-4a30-8af2-7262a89b31c4',
+      redirectUri: 'http://localhost:4200',
+
+    }
+  })
+}
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    JarInfoComponent,
+    StarInfoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MsalModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: MSAL_INSTANCE,
+      useFactory: MSALInstanceFactory
+    },
+    MsalService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

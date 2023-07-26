@@ -1,6 +1,13 @@
-<div id="background">
-  <h1>ברוכים הבאים לאתה קנוס</h1>
-  <p>פה תוכל לראות כמה כל אחד מיכם קנוס</p>
-  <button>לראות את הכוכבים</button>
-  <button>לראות את צינצנות</button>
+<div id="container">
+  <div *ngIf="currentPage === 'home'">
+    <h1>ברוכים הבאים לאתה קנוס</h1>
+    <p>פה תוכל לראות כמה כל אחד מיכם קנוס</p>
+    <button (click)="currentPage = 'stars'">לראות את הכוכבים</button>
+    <button (click)="currentPage = 'jars'">לראות את צינצנות</button>
+    <button>login</button>
+  </div>
+
+  <app-jar-info (close)="currentPage = 'home'" *ngIf="currentPage === 'jars'"></app-jar-info>
+  <app-star-info (close)="currentPage = 'home'" *ngIf="currentPage === 'stars'"></app-star-info>
 </div>
+<router-outlet></router-outlet>

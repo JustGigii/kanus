@@ -1,3 +1,4 @@
+import { MsalService } from '@azure/msal-angular';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kanus';
+
+  currentPage: string = 'home';
+
+  constructor(private msalService: MsalService) {}
+
+  login() {
+  }
 }

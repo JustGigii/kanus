@@ -1,0 +1,10 @@
+<button (click)="close.emit()">close</button>
+<div id="person" *ngIf="person">
+  <p>id: {{person.id}}</p>
+  <p>name: {{person.name}}</p>
+  <p>type: {{person.type}}</p>
+  <img [src]="person.img" alt="img">
+  <p>mail: {{person.mail}}</p>
+  <p>couse: {{person.couse}}</p>
+  <p>counter: {{person.counter}}</p>
+</div>
