@@ -9,15 +9,7 @@ import { RequestService } from 'src/app/services/request.service';
   styleUrls: ['./jar-info.component.scss']
 })
 export class JarInfoComponent implements OnInit {
-  person: people = {
-    id: 0,
-    name: "dskasa",
-    type: "stars",
-    img: "star,",
-    mail: "sada",
-    couse: "sadsa",
-    counter: 5
-  };
+  poeple?: people[];
 
   @Output() close = new EventEmitter();
 
@@ -31,9 +23,9 @@ export class JarInfoComponent implements OnInit {
 
   onGetPeople(): void {
     console.log("running");
-    this.requestService.getPerson().subscribe(
+    this.requestService.getPeople().subscribe(
       (response) => {
-        this.person = response;
+        this.poeple = response;
         console.log("stored person")
         console.log(response)
       },

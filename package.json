@@ -19,7 +19,7 @@
     "@angular/platform-browser-dynamic": "^16.1.6",
     "@angular/router": "^16.1.6",
     "@azure/msal-angular": "^3.0.0-alpha.0",
-    "@azure/msal-browser": "^3.0.0-alpha.0",
+    "@azure/msal-browser": "^2.38.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.1"
