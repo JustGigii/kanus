@@ -27,7 +27,7 @@ export class IdfLoginComponent implements OnInit {
     //     }
     //   );
     // }
-    this.logIn();
+    // this.logIn();
   }
 
   isLoggedIn() : boolean {
