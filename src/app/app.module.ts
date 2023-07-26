@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StarInfoComponent } from './components/star-info/star-info.component';
 import { MSAL_INSTANCE, MsalModule, MsalService } from '@azure/msal-angular';
 import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-browser';
+import { HomeComponent } from './components/home/home.component';
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
@@ -24,7 +25,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
   declarations: [
     AppComponent,
     JarInfoComponent,
-    StarInfoComponent
+    StarInfoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

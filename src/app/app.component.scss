@@ -1,12 +1,19 @@
 #container {
-  text-align: center;
+  // --nav-height: 5vh;
+  position: absolute;
+  // margin-top: var(--nav-height);
+  background-color: aliceblue;
 
-  #jars-container {
-    height: 57vh;
-    width: 50vw;
-    background-color: azure;
-    bottom: 10vh;
-    position: fixed;
-    left: 0;
+  #home {
+    // background-color: red;
   }
 }
+
+// #nav-bar {
+//   --nav-height: 5vh;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   height: var(--nav-height);
+//   background-color: #1f536f;
+// }

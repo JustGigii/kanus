@@ -1,13 +1,13 @@
-<div id="container">
-  <div *ngIf="currentPage === 'home'">
-    <h1>ברוכים הבאים לאתה קנוס</h1>
-    <p>פה תוכל לראות כמה כל אחד מיכם קנוס</p>
-    <button (click)="currentPage = 'stars'">לראות את הכוכבים</button>
-    <button (click)="currentPage = 'jars'">לראות את צינצנות</button>
-    <button>login</button>
-  </div>
+<div id="waiting" *ngIf="!user">
+  <p *ngIf="isLoggedIn(); else loggedOut">You're logged in</p>
+  <ng-template #loggedOut>
+    <p>You're logged out</p>
+  </ng-template>
+</div>
 
-  <app-jar-info (close)="currentPage = 'home'" *ngIf="currentPage === 'jars'"></app-jar-info>
-  <app-star-info (close)="currentPage = 'home'" *ngIf="currentPage === 'stars'"></app-star-info>
+<div id="container" [hidden]="!user">
+  <app-home (changePages)="changePage($event)" *ngIf="currentPage === 'home'" [user]="user"></app-home>
+  <app-jar-info (close)="changePage('home')" *ngIf="currentPage === 'jars'"></app-jar-info>
+  <app-star-info (close)="changePage('home')" *ngIf="currentPage === 'stars'"></app-star-info>
 </div>
 <router-outlet></router-outlet>
