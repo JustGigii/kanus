@@ -11,6 +11,7 @@ import { RequestService } from 'src/app/services/request.service';
 export class JarInfoComponent implements OnInit {
   person!: people;
 
+
   @Output() close = new EventEmitter();
 
   constructor(private requestService: RequestService) {
@@ -23,9 +24,9 @@ export class JarInfoComponent implements OnInit {
 
   onGetPeople(): void {
     console.log("running");
-    this.requestService.getPerson().subscribe(
+    this.requestService.getPeople().subscribe(
       (response) => {
-        this.person = response;
+        this.poeple = response;
         console.log("stored person")
         console.log(response)
       },
