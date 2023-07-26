@@ -19,5 +19,4 @@ export class HomeComponent implements OnInit {
   changePagesEmit(page: string) {
     this.changePages.emit(page);
   }
-
 }
