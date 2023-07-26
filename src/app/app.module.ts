@@ -4,13 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JarInfoComponent } from './components/jar-info/jar-info.component';
+import { StarInfoComponent } from './components/star-info/star-info.component';
+import { IdfLoginComponent } from './components/idf-login/idf-login.component';
+import { HomeComponent } from './components/home/home.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { StarInfoComponent } from './components/star-info/star-info.component';
 import { MSAL_INSTANCE, MsalModule, MsalService } from '@azure/msal-angular';
 import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-browser';
-import { HomeComponent } from './components/home/home.component';
-import { IdfLoginComponent } from './components/idf-login/idf-login.component';
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({

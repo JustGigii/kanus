@@ -14,19 +14,20 @@ export class IdfLoginComponent implements OnInit {
   constructor(private msalService: MsalService) { }
 
   ngOnInit(): void {
-    console.log(this.msalService.instance.getActiveAccount());
-    if (this.msalService.instance.getActiveAccount() !== null) {
-      this.userLogged.emit(this.msalService.instance.getActiveAccount());
-    } else {
-      this.msalService.instance.handleRedirectPromise().then(
-        res => {
-          if (res != null && res.account != null) {
-            this.msalService.instance.setActiveAccount(res.account);
-            this.userLogged.emit(res.account);
-          }
-        }
-      );
-    }
+    // console.log(this.msalService.instance.getActiveAccount());
+    // if (this.msalService.instance.getActiveAccount() !== null) {
+    //   this.userLogged.emit(this.msalService.instance.getActiveAccount());
+    // } else {
+    //   this.msalService.instance.handleRedirectPromise().then(
+    //     res => {
+    //       if (res != null && res.account != null) {
+    //         this.msalService.instance.setActiveAccount(res.account);
+    //         this.userLogged.emit(res.account);
+    //       }
+    //     }
+    //   );
+    // }
+    this.logIn();
   }
 
   isLoggedIn() : boolean {
@@ -34,10 +35,13 @@ export class IdfLoginComponent implements OnInit {
   }
 
   logIn() {
-    this.msalService.loginRedirect();
-    // this.msalService.loginPopup().subscribe((response: AuthenticationResult) => {
-    //   this.msalService.instance.setActiveAccount(response.account)
-    // });
+    // this.msalService.loginRedirect();
+    this.msalService.loginPopup().subscribe(
+      (response: AuthenticationResult) => {
+      this.msalService.instance.setActiveAccount(response.account)
+      this.userLogged.emit(response.account);
+
+    });
   }
 
   logOut() {

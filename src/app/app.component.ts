@@ -18,13 +18,12 @@ export class AppComponent implements OnInit {
 
   }
 
-
-
   changePage(page: string) {
     this.currentPage = page;
   }
 
   setUser(user: AccountInfo) {
+    console.log(user);
     this.user = user;
   }
 }
