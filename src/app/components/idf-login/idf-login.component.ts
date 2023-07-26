@@ -40,8 +40,14 @@ export class IdfLoginComponent implements OnInit {
       (response: AuthenticationResult) => {
       this.msalService.instance.setActiveAccount(response.account)
       this.userLogged.emit(response.account);
-
-    });
+      },
+      (error: any) => {
+        console.log(error)
+      },
+      () => {
+        console.log("complete");
+      }
+    );
   }
 
   logOut() {
