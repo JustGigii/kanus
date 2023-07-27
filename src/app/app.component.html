@@ -1,7 +1,8 @@
 <div id="container">
   <app-idf-login (userLogged)="setUser($event)"></app-idf-login>
 </div>
-  <div *ngIf="user">
+
+  <div class="contect" *ngIf="user">
     <app-home (changePages)="changePage($event)" *ngIf="currentPage === 'home'" [user]="user"></app-home>
     <app-jar-info (close)="changePage('home')" *ngIf="currentPage === 'jars'"></app-jar-info>
     <app-star-info (close)="changePage('home')" *ngIf="currentPage === 'stars'"></app-star-info>

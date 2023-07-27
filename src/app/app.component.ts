@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'kanus';
 
   user!: AccountInfo;
-  currentPage: string = 'home';
+  currentPage: string = 'stars';
 
   constructor() {}
   ngOnInit(): void {

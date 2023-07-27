@@ -5,5 +5,6 @@ export interface people {
   img: string,
   mail: string,
   couse: string,
-  counter: number
+  counter: number,
+  textsrar: string
 }

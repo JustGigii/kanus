@@ -1,0 +1,47 @@
+.bord
+{
+    position: relative;
+    width: 94%;
+    margin: 0 3%;
+    margin-top: 3%;
+}
+.bord-button{
+    position: relative;
+    width: 94%;
+    margin: 0 3%;
+    margin-top: -1%;
+}
+.mid
+{
+    h1
+    {
+        padding-left: 4%;
+        text-align: left;
+        margin: 0%
+    }
+       background-image: url(../../../assets/Image/middle.png);
+       background-size: cover;
+       background-repeat: no-repeat;
+       margin: -1% 3%;
+       
+      
+}
+.star
+{
+    padding-left: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    svg {
+        width: 12%;
+        padding-left: 2%;
+      }
+      path {
+        fill: url(#g-image);
+      }
+      
+    
+
+
+}
