@@ -15,16 +15,14 @@ export class AppComponent implements OnInit {
 
   constructor() {}
   ngOnInit(): void {
-
   }
-
-
 
   changePage(page: string) {
     this.currentPage = page;
   }
 
   setUser(user: AccountInfo) {
+    console.log(user);
     this.user = user;
   }
 }

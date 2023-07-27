@@ -9,7 +9,8 @@ import { RequestService } from 'src/app/services/request.service';
   styleUrls: ['./jar-info.component.scss']
 })
 export class JarInfoComponent implements OnInit {
-  poeple?: people[];
+  person!: people;
+
 
   @Output() close = new EventEmitter();
 
