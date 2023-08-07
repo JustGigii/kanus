@@ -3,3 +3,48 @@
   width: 20vw;
   background-color: aqua;
 }
+.catalog
+{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  .idontlikecss
+{
+  padding: 1%;
+}
+img {
+  aspect-ratio: 1/1 ;
+  width: 85%;
+  height: 85%;
+};
+}
+.person
+{
+  text-align: center;
+}
+.jar
+{
+  margin: 0;
+ background-image: url(../../../assets/Image/jar.png);
+ background-size:contain;
+ background-repeat: no-repeat;
+ background-position: center;
+ height: 70vh;
+ img {
+  margin-top: 219px;
+  height:180px;
+  width: 357px;
+ };
+}
+.loading
+{
+  position: absolute;
+  background-image: url(../../../assets/Image/loading.gif);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 65%;
+  width: 100%;
+  left: 0%;
+  top: 12%;
+}

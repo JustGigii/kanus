@@ -7,16 +7,18 @@ import { JarInfoComponent } from './components/jar-info/jar-info.component';
 import { StarInfoComponent } from './components/star-info/star-info.component';
 import { IdfLoginComponent } from './components/idf-login/idf-login.component';
 import { HomeComponent } from './components/home/home.component';
+import { environment } from 'src/environments/environment';
 
 import { HttpClientModule } from '@angular/common/http';
 import { MSAL_INSTANCE, MsalModule, MsalService } from '@azure/msal-angular';
 import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-browser';
+import { RoutingComponent } from './components/routing/routing.component';
 
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: 'c25247c6-3cd6-4a30-8af2-7262a89b31c4',
-      redirectUri: 'http://localhost:4200',
+      clientId: '2ff458ca-224c-4db4-8cbc-230cee2975cf',
+      redirectUri:(environment.production)? 'https://abouthupa.azurewebsites.net/shhh':'http://localhost:4200/shhh',
 
     }
   })
@@ -28,7 +30,8 @@ export function MSALInstanceFactory(): IPublicClientApplication {
     JarInfoComponent,
     StarInfoComponent,
     HomeComponent,
-    IdfLoginComponent
+    IdfLoginComponent,
+    RoutingComponent
   ],
   imports: [
     BrowserModule,

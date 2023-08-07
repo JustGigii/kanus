@@ -2,7 +2,7 @@ body {
 	margin: 0;
 //	box-sizing: border-box;
 	position: relative;
-	background-color: #7bc9f4;
+	background-color: #0D0D0D;
 }
 
 html, body {
@@ -12,15 +12,16 @@ html, body {
 * {
   direction: rtl;
   user-select: none;
+  margin: 0;
 }
 
 html * {
-	font-family: 'Assistant', sans-serif;
+//	font-family: 'Assistant', sans-serif;
 }
 
 button {
   appearance: button;
-  background-color: #b9daea;
+  background-color: #cfd1d2;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
@@ -47,31 +48,17 @@ button {
   width: fit-content;
 }
 
-button:after {
-  background-clip: padding-box;
-  background-color: #6daac7;
-  border: solid transparent;
-  border-radius: 16px;
-  border-width: 0 0 4px;
-  bottom: -4px;
-  content: "";
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-}
 
-button:main,
-button:focus {
-  user-select: auto;
+h1,p{
+  font-family: Miriam Fixed;
+  color: #FFFFFF;
 }
-
-button:hover:not(:disabled) {
-  filter: brightness(1.1);
-  -webkit-filter: brightness(1.1);
-}
-
-button:disabled {
-  cursor: auto;
+@font-face {
+  font-family: Miriam Fixed;
+  src: url(assets/font/MiriamFixed.eot); /* IE9 Compat Modes */
+  src: url(assets/font/MiriamFixed.eot) format('embedded-opentype'), /* IE6-IE8 */
+       url(assets/font/MiriamFixed.woff2) format('woff2'), /* Super Modern Browsers */
+       url(assets/font/MiriamFixed.woff) format('woff'), /* Pretty Modern Browsers */
+       url(assets/font/MiriamFixed.ttf)  format('truetype'), /* Safari, Android, iOS */
+       url(assets/font/MiriamFixed.svg) format('svg'); /* Legacy iOS */
 }

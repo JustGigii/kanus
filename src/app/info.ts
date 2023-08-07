@@ -4,7 +4,7 @@ export interface people {
   type: string,
   img: string,
   mail: string,
-  couse: string,
+  title: string,
   counter: number,
   textsrar: string
 }

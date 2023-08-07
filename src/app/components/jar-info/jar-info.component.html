@@ -1,1 +1,22 @@
+<div *ngIf="this.person == undefined"  class="catalog">
+    <div *ngFor="let person of this.people" class="idontlikecss" >   
+        <img src={{person.img}}  (click)="chanechoose(person)"/>
+      
+    </div>
+ 
+</div>
+<div class="person" *ngIf="this.person != undefined">
+    <h1>{{this.person.title}} של  {{this.person.name}}</h1>
+    <div class="jar">
+        <img src="{{this.person.img}}" alt="">
+        
+    </div>
+    <div class="panel">
+        <h1>אתה כנוס ב{{this.person.counter}} שקל</h1>
+        <button (click)="addcoint()">להוסיף שקל</button>
+    </div>
+    <div *ngIf="this.isadd"  class="loading"></div>
+</div>
+<button (click)="close.emit()">close</button>
+
 

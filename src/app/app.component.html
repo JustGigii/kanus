@@ -1,17 +1,10 @@
-<div id="container">
-<<<<<<< HEAD
-  <app-idf-login (userLogged)="setUser($event)"></app-idf-login>
-</div>
-
-  <div class="contect" *ngIf="user">
-=======
+<!-- <div id="container">
   <p>is user undefined? {{user === undefined}}</p>
   <app-idf-login *ngIf="!user" (userLogged)="setUser($event)"></app-idf-login>
   <div *ngIf="user">
->>>>>>> 2ac3e6ea23633828ba274a54dfef7fc16f2b62f1
     <app-home (changePages)="changePage($event)" *ngIf="currentPage === 'home'" [user]="user"></app-home>
-    <app-jar-info (close)="changePage('home')" *ngIf="currentPage === 'jars'"></app-jar-info>
+    <app-jar-info [user]="user" (close)="changePage('home')" *ngIf="currentPage === 'jars'"></app-jar-info>
     <app-star-info (close)="changePage('home')" *ngIf="currentPage === 'stars'"></app-star-info>
-  </div>
+  </div> -->
 
 <router-outlet></router-outlet>

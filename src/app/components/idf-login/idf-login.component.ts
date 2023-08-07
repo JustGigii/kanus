@@ -13,12 +13,12 @@ export class IdfLoginComponent implements OnInit {
   constructor(private msalService: MsalService) { }
 
   ngOnInit(): void {
-    if (sessionStorage.getItem('account')) {
-      const acc = JSON.parse(sessionStorage.getItem('account')!);
-      console.log(acc);
-      this.msalService.instance.setActiveAccount(acc);
-      this.userLogged.emit(acc);
-    }
+    // if (sessionStorage.getItem('account')) {
+    //   const acc = JSON.parse(sessionStorage.getItem('account')!);
+    //   console.log(acc);
+    //   this.msalService.instance.setActiveAccount(acc);
+    //   this.userLogged.emit(acc);
+    // }
   }
 
   isLoggedIn() : boolean {

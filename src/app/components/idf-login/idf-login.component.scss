@@ -1,0 +1,32 @@
+.waiting
+{
+    align-items: center;
+}
+.title
+{
+    padding-top: 101%;
+    text-align: center;
+}
+button
+{
+    margin-right: 40%;
+    margin-top: 40%;
+    background-color: #0D0D0D;
+    border-width: 1px;
+    border-style:solid;
+    border-color: white;
+    font-family: 'Miriam Fixed';
+    border-radius: 12px;
+    padding: 2% 4% 1% 4%;
+}
+button:hover
+{
+    background-color: #787474;
+
+}
+p
+{
+    display:inline-block;
+    margin: 6% 20% 2% 19%;
+    text-align: center;
+}
