@@ -1,9 +1,17 @@
-<div id="container">
+<div class="content">
+
 
     <app-idf-login *ngIf="!user" (userLogged)="setUser($event)"></app-idf-login>
     <div *ngIf="user">
       <app-home (changePages)="changePage($event)" *ngIf="currentPage === 'home'" [user]="user"></app-home>
-      <app-jar-info [user]="user" (close)="changePage('home')" *ngIf="currentPage === 'jars'"></app-jar-info>
-      <app-star-info (close)="changePage('home')" *ngIf="currentPage === 'stars'"></app-star-info>
-    </div>
+      <div class="content" *ngIf="currentPage === 'jars' || currentPage === 'stars'">
+        <div class="title">
+         <h1> {{this.subtitle}}</h1>
+          <img src={{this.image}}>
+         </div>
+        <app-jar-info [user]="user" (close)="changePage('home')" *ngIf="currentPage === 'jars'"></app-jar-info>
+        <app-star-info (close)="changePage('home')" *ngIf="currentPage === 'stars'"></app-star-info>
   
+      </div>
+     
+</div>

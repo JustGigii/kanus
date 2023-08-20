@@ -1,16 +1,54 @@
 #home {
-  height: fit-content;
-  width: fit-content;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
 }
 
-.yyy {
-  background-color: #0d0d0d;
-}
+
 
 .colo {
+  margin-top: 60%;
+  margin-bottom: 5%;
   color: white;
 }
 
 #rem {
-  font-size: 4rem;
+  font-size: 2rem;
 }
+.selcetion
+{
+
+  padding:2% 2% 1% 1%;
+  width: 60%;
+  text-align:center;
+  background-color: white;
+  font-family: 'Miriam Fixed';
+  font-size: 2rem;
+  border-radius: 15px;
+}    
+.button{
+  border-radius: 35px;
+  font-size: 1.5rem;
+  padding: 3.6% 4%;
+  margin-left: 3%;
+  margin-right:3%;
+  margin-top: 2%;
+  font-family: 'Miriam Fixed';
+}   
+.continer
+{
+  display:flex;
+  justify-content: center
+}
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: nowrap;
+  
+}
+
+

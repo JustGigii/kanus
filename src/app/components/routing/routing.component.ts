@@ -11,6 +11,8 @@ export class RoutingComponent {
 
   user!: AccountInfo;
   currentPage: string = 'home';
+  subtitle:string = 'צינצנות:';
+  image: string = '../../../assets/Image/'
 
   constructor() {}
   ngOnInit(): void {
@@ -23,7 +25,10 @@ export class RoutingComponent {
   }
 
   changePage(page: string) {
+    this.image = '../../../assets/Image/'
     this.currentPage = page;
+    this.subtitle = (page==='jars')?':צנצנות:':(page==='stars')?'כוכבים:':''
+    this.image +=(page==='jars')?'jar.svg':(page==='stars')?'star.svg':''
   }
 
   setUser(user: AccountInfo) {

@@ -1,6 +1,12 @@
 <div id="home" class="yyy">
-  <h1 id="rem" class="colo">היי {{user.name}} :)</h1>
-  <p class="colo"> פה תוכל לראות כמה כל אחד מיכם קנוס</p>
-  <button (click)="changePagesEmit('stars')">לראות את הכוכבים</button>
-  <button (click)="changePagesEmit('jars')">לראות את צינצנות</button>
+
+  <div class="center">
+    <h1 id="rem" class="colo">היי {{user.name}} :)</h1>
+    <div class="selcetion">לחץ לבחירה:</div>
+  </div>
+   <br/>
+  <div class="continer">
+    <button class="button" (click)="changePagesEmit('stars')">הכוכבים</button>
+    <button class="button" (click)="changePagesEmit('jars')">צינצנות</button>
+  </div>
 </div>
